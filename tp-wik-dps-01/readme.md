@@ -56,3 +56,7 @@ Une page 404 sans élements dans le body.
 
 Variables d'environnement disponibles dans `.env`:
 - `PORT` - Port du serveur (défaut: 3000)
+
+## Bonus
+
+Incrementation des requetes des differents endpoints depuis le démarrage du serveur sur la page /stats.
