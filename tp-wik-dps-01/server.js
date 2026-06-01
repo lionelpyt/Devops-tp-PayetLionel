@@ -13,8 +13,7 @@ app.get('/ping', (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).json({
-  });
+  res.sendStatus(404);
 });
 
 app.listen(PORT, () => {
