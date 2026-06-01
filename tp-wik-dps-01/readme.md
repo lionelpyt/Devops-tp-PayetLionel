@@ -35,7 +35,7 @@ npm start
 
 Le serveur écoute sur `http://localhost:3000`
 
-## 🔍 Utilisation
+## Utilisation
 
 ### Tester l'endpoint `/ping`
 
