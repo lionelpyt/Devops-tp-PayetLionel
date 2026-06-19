@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: tp-wik-dps-02/Dockerfile
+    expose:
+      - "3000"
+    restart: unless-stopped
+    deploy:
+      replicas: 4
+    volumes:
+      - stats-data:/app/data
+
+  reverse-proxy:
+    image: nginx:alpine
+    container_name: reverse-proxy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  stats-data:
